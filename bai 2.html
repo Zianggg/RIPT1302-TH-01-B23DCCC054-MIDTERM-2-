@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 2</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient( to right,#385170, Indigo);
+        }
+        .headline{
+            text-align: center;
+            font-size: 50px;
+            color: whitesmoke;
+        }
+        .input-box input{
+            width: 40%;
+            height: 70%;
+            background: #9fd3c7;
+            border: 3px solid MidnightBlue;
+            border-radius: 30px;
+            font-size: 15px;
+            color: aliceblue;
+            padding: 20px ;
+               
+        }
+        .input-box ::placeholder{
+            color: #34568B;
+        }
+
+        .button{
+            margin: 1% 39%;
+            width: 20%;
+            height: 35px;
+            background: IndianRed;
+            border: none;
+            border-radius: 40px;
+            font-size: 20px;
+            color: blanchedalmond;
+            cursor: pointer
+            
+            
+        }
+        #display {
+            height: 1.5em;
+            width: auto;
+            color: whitesmoke;
+            margin: 10% 25%;
+            font-size: 90px;
+            font-family: 'Orbitron', sans-serif;
+    }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <form action="">
+    <h1 class="headline">COUNTDOWN CLOCK</h1>
+    <div class="input-box">
+        <input id="minutes" type="numbers" placeholder="minutes" min="0" max="59" >
+        <input id="seconds" type="seconds" placeholder="seconds" min="0" max="59" >
+    </div>
+    <div id="display"></div>
+    <button class="button" id="start" onclick="watch()">Start</button>
+    <button class="button" id="reset" type="reset" value="reset" onclick="reset()">Reset</button>
+</form>
+<script>
+      let mins = document.getElementById("minutes");
+      let secs = document.getElementById("seconds");
+      let display = document.getElementById("display");
+      let start = document.getElementById("start");
+      let x;
+
+      function displaymin() {
+        display.innerHTML =
+          (minutes.value > 9 ? minutes.value : "0" + minutes.value) +
+          ":" +
+          (seconds.value > 9 ? seconds.value : "0" + seconds.value);
+      }
+
+      function watch() {
+        start.disabled = true;
+        mins.disabled = true;
+        secs.disabled = true;
+        var date1 = new Date();
+        var countDownDate = new Date();
+        countDownDate.setTime(
+          date1.getTime() + 
+            minutes.value * 60 * 1000 +
+            seconds.value * 1000 +
+            1 * 1000
+        );
+        var x = setInterval(function () {
+          
+          var now = new Date().getTime();
+
+        
+          var distance = countDownDate - now;
+
+          
+          
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          
+          display.innerHTML =(minutes > 9 ? minutes : "0" + minutes) +":" +(seconds > 9 ? seconds : "0" + seconds);
+          
+          var audio = new Audio("Feel it.mp3");
+
+          
+          if (display.innerHTML == "00:00") {
+            clearInterval(x);
+            audio.play("Feel it.mp3")
+          }
+        }, 1000);
+      }
+      function reset() {
+      clearInterval(x);
+      mins.value = 0;
+      secs.value = 0;
+      start.disabled = false;
+      mins.disabled = false;
+      secs.disabled = false;
+      display.innerHTML = "00:00";
+    }
+
+
+</script>
+</body>
+</html>
