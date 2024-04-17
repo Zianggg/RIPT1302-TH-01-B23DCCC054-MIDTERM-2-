@@ -1,210 +1,111 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>bai 3</title>
-        <style>
-            body{
-        background-color: #D5D5D5;
-        font-family: system-ui;
-    }
-    .container{
-        background-color: #E9E7EA;
-        width:1000px;
-        max-width: 100%;
-        margin:auto;
-        padding:50px;
-        box-shadow: 0 10px 50px #858585;
-        display: grid;
-       grid-template-columns: 35% 60%;
-       column-gap: 5%; 
-       row-gap: 30px;
-    }
-    
-    .avatar img{
-        width:200px;
-        height:200px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-    .avatar{
-        display: flex;
-        justify-content: end;
-        align-items: center;
-    }
-    .name{
-        padding-left: 30px;
-        border-left:1px solid #000;
-    }
-    .name h1{
-        font-weight: 300;
-        font-size: xxx-large;
-        margin:0px 0 5px ;
-    }
-    .name .specialize{
-        margin:0;
-        font-weight: bold;
-        letter-spacing: 3px;
-    }
-    .name .contact{
-        padding:0;
-        list-style: none;
-    }
-    .name .contact span{
-        display: inline-block;
-        background-color: #000;
-        width:20px;
-        height:20px;
-        color:#fff;
-        text-align: center;
-        border-radius: 50%;
-        font-size: small;
-        margin-right: 20px;
-    }
-    .name .contact li{
-        padding:5px 0;
-        transform: translate(-40px);
-        background-color: #E9E7EA;
-    }
-    .info ul{
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        text-align: right;
-        line-height: 30px;
-    } 
-    
-    h2{
-        padding:0;
-        margin: 0 0 20px 0;
-    }
-    .intro{
-        padding-left: 30px;
-        border-left: 1px solid #000;
-        text-align: justify;
-    }
-    .experience{
-        text-align: right;
-    }
-    .experience h4{
-        margin:20px 0 10px;
-    }
-    .skills{
-        margin-top:  50px;
-    }
-    .experience ul{
-        padding:0;
-        margin: 0;
-    list-style: none;
-    }
-    .experience li{
-        padding:10px 0;
-    }
-    .project{
-        padding-left: 30px;
-        text-align: justify;
-        border-left: 1px solid #000;
-    }
-    .project h4{
-        margin:20px 0 10px;
-    }
-    .project .web{
-        color: #0c7373;
-        padding:10px 0;
-    }
-    .project .location{
-        font-weight: 500;
-        padding-bottom:10px;
-    }
-    .project .item{
-        position: relative;
-    }
-    .project .item::before{
-        position: absolute;
-        width:13px;
-        height: 13px;
-        background-color: #000;
-        content: '';
-        border-radius: 50%;
-        left: -37px;
-    }
-    .links{
-        text-decoration: none;
-    }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-           <div class="avatar">
-            <img src="CV.jpg" alt="">
-           </div>
-           <div class="name">
-                <h1>NGUYEN TRUONG GIANG</h1>
-                <div class="specialize">Freshman</div>
-                <ul class="contact">
-                    <li>
-                        <span>P</span> 0764623705
-                    </li>
-                    <li>
-                        <span>E</span> nguyengiang01122005@gmail.com
-                    </li>
-                    <li>
-                        <span>W</span> 16 Ngõ 68 Đường Quan Nhân Quận Cầu Giấy Thành Phố Hà Nội
-                    </li>
-                </ul>
-           </div>
-           <div class="info">
-                <ul>
-                    <li>01/12/2005</li>
-                    <li>Posts and Telecommunications Institute of Technology.
-                    </li>
-                </ul>
-           </div>
-           <div class="intro">
-            <h2>HỌC VẤN</h2>
-            Hiện đang học tại Học Viện Công Nghệ Bưu Chính Viễn Thông (PTIT)
-           </div>
-           <div class="experience">
-            <h2>KINH NGHIỆM LÀM VIỆC</h2>
-    
-            <div class="item">
-                <h4>KHÔNG</h4>
-                <div class="item"></div>
-                <div class="des"></div>
-            </div>
-                <div class="item">
-                    <h2>ĐIỂM MẠNH</h2>TIẾNG ANH
-                <BR></BR>
-                </div>
-                <DIv class="item">
-                    <h2>ĐIỂM YẾU</h2>GIAO TIẾP
-                </DIv>
-                <h2 class="skills">
-                    SKILLS
-                </h2>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>TIẾNG ANH</li>
-                </ul>
-           </div>
-           <div class="project">
-            <h2>PROJECTS</h2>
-            <div class="item">
-                <h4>GAME ĐUA XE MADRACER</h4>
-                <div class="time">
-                    2024
-            </div>
-    
-            <div class="item">
-                <h2>CONTACT ME THROUGHT</h2>
-                <UL>
-                    <li><a href="https://www.facebook.com/profile.php?id=100019964265445" class="links">Facebook: Nguyễn Trường Giang</a></li>
-                    <li><a href="https://github.com/Zianggg?tab=repositories" class="links">Github: Zianggg</a></li>
-                </UL>
-            </div>
-    </body>
-    </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Clock</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(to right, #385170, Indigo);
+        }
+        .headline {
+            text-align: center;
+            font-size: 50px;
+            color: whitesmoke;
+        }
+        .input-box input {
+            width: 40%;
+            height: 70%;
+            background: #9fd3c7;
+            border: 3px solid MidnightBlue;
+            border-radius: 30px;
+            font-size: 15px;
+            color: aliceblue;
+            padding: 20px;
+        }
+        .input-box ::placeholder {
+            color: #34568B;
+        }
+        .button {
+            margin: 1% 39%;
+            width: 20%;
+            height: 35px;
+            background: IndianRed;
+            border: none;
+            border-radius: 40px;
+            font-size: 20px;
+            color: blanchedalmond;
+            cursor: pointer;
+        }
+        #display {
+            height: 1.5em;
+            width: auto;
+            color: whitesmoke;
+            margin: 10% 25%;
+            font-size: 90px;
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return false;">
+        <h1 class="headline">COUNTDOWN CLOCK</h1>
+        <div class="input-box">
+            <input id="minutes" type="number" placeholder="Minutes" min="0" max="59">
+            <input id="seconds" type="number" placeholder="Seconds" min="0" max="59">
+        </div>
+        <div id="display">00:00</div>
+        <button class="button" id="start">Start</button>
+        <button class="button" id="reset">Reset</button>
+    </form>
+    <script>
+        let mins = document.getElementById("minutes");
+        let secs = document.getElementById("seconds");
+        let display = document.getElementById("display");
+        let start = document.getElementById("start");
+        let reset = document.getElementById("reset");
+        let timer = null;
+
+        start.addEventListener('click', function() {
+            start.disabled = true;
+            mins.disabled = true;
+            secs.disabled = true;
+            let date1 = new Date();
+            let countDownDate = new Date(date1.getTime() + mins.value * 60 * 1000 + secs.value * 1000);
+
+            timer = setInterval(function () {
+                let now = new Date().getTime();
+                let distance = countDownDate - now;
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                display.innerHTML = (minutes > 9 ? minutes : "0" + minutes) + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    display.innerHTML = "00:00";
+                    start.disabled = false;
+                    mins.disabled = false;
+                    secs.disabled = false;
+                }
+            }, 1000);
+        });
+
+        reset.addEventListener('click', function() {
+            clearInterval(timer);
+            mins.value = '';
+            secs.value = '';
+            display.innerHTML = "00:00";
+            start.disabled = false;
+            mins.disabled = false;
+            secs.disabled = false;
+        });
+    </script>
+</body>
+</html>
